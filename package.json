@@ -3,8 +3,12 @@
     "displayName": "Typescript JSON schema generator",
     "description": "Create JSON schemas from typescript code",
     "icon": "images/icon.png",
-    "version": "0.3.0",
-    "publisher": "marcoqu",
+    "version": "0.0.1",
+    "publisher": "marcoq",
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/marcoq/vscode-typescript-to-json-schema"
+    },
     "engines": {
         "vscode": "^1.23.0"
     },
