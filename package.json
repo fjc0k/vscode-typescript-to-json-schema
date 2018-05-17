@@ -3,7 +3,7 @@
     "displayName": "Typescript JSON schema generator",
     "description": "Create JSON schemas from typescript code",
     "icon": "images/icon.png",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "marcoq",
     "repository": {
         "type": "git",

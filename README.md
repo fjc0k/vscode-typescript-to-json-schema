@@ -21,10 +21,17 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-The JSON schema generation does not work for class and conditional types.  
+The JSON schema generation does not work for classes and conditional types.  
 File scheme generations issues with [typescript-to-json-schema](https://github.com/xiag-ag/typescript-to-json-schema/issues)
 
+The extension is still being developed and often fails in somewhat misterious ways.
+
 ## Release Notes
+
+
+### 0.0.2
+
+fixed: Schema generator fails silently when there are errors on the program.
 
 ### 0.0.1
 
