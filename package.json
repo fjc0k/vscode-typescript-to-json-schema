@@ -10,32 +10,10 @@
     "categories": [
         "Other"
     ],
-    "activationEvents": [
-        "onCommand:extension.generateJSONSchema"
-    ],
+	"activationEvents": [
+		"onLanguage:typescript"
+	],
     "main": "./out/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "extension.generateJSONSchema",
-                "title": "Generate JSON schema"
-            }
-        ],
-        "menus": {
-            "editor/context": [
-                {
-                    "command": "extension.generateJSONSchema",
-                    "group": "YourGroup@1"
-                }
-            ],
-            "commandPalette": [
-                {
-                    "command": "extension.generateJSONSchema",
-                    "when": "editorHasSelection"
-                }
-            ]
-        }
-    },
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
