@@ -1,18 +1,62 @@
 {
-    "name": "vscode-type-to-json-schema",
-    "displayName": "vscode-type-to-json-schema",
-    "description": "Create json schema from given type declaration",
-    "version": "0.0.1",
-    "publisher": "marcoq",
+    "name": "vscode-typescript-to-json-schema",
+    "displayName": "Typescript JSON schema generator",
+    "description": "Create JSON schemas from typescript code",
+    "icon": "images/icon.png",
+    "version": "0.3.0",
+    "publisher": "marcoqu",
     "engines": {
         "vscode": "^1.23.0"
     },
     "categories": [
         "Other"
     ],
-	"activationEvents": [
-		"onLanguage:typescript"
-	],
+    "activationEvents": [
+        "onCommand:extension.generateJSONSchema"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.generateJSONSchema",
+                "title": "Generate JSON Schema for type..."
+            }
+        ],
+        "configuration": {
+            "title": "Generate JSON schema configuration",
+            "properties": {
+                "generateJSONSchema.expose": {
+                    "enum": [
+                        "all",
+                        "none",
+                        "export"
+                    ],
+                    "type": "string",
+                    "default": "export",
+                    "description": "Types to include in the 'defintions' section of the JSON Schema."
+                },
+                "generateJSONSchema.topRef": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Include top ref"
+                },
+                "generateJSONSchema.jsDoc": {
+                    "enum": [
+                        "none",
+                        "extended",
+                        "basic"
+                    ],
+                    "type": "string",
+                    "default": "basic",
+                    "description": "JsDoc description to include in JSON schema"
+                },
+                "generateJSONSchema.sortProps": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Sort properties in JSON schema"
+                }
+            }
+        }
+    },
     "main": "./out/extension",
     "scripts": {
         "vscode:prepublish": "npm run compile",
@@ -26,6 +70,7 @@
         "@types/node": "^7.0.43",
         "tslint": "^5.8.0",
         "typescript": "^2.8.3",
+        "@types/json-schema": "^6.0.1",
         "vscode": "^1.1.6"
     },
     "dependencies": {
