@@ -1,0 +1,56 @@
+{
+    "name": "vscode-type-to-json-schema",
+    "displayName": "vscode-type-to-json-schema",
+    "description": "Create json schema from given type declaration",
+    "version": "0.0.1",
+    "publisher": "marcoq",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.generateJSONSchema"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.generateJSONSchema",
+                "title": "Generate JSON schema"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "extension.generateJSONSchema",
+                    "group": "YourGroup@1"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "extension.generateJSONSchema",
+                    "when": "editorHasSelection"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "tslint": "^5.8.0",
+        "typescript": "^2.8.3",
+        "vscode": "^1.1.6"
+    },
+    "dependencies": {
+        "typescript-to-json-schema": "^0.5.0"
+    }
+}
