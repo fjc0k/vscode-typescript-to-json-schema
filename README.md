@@ -7,7 +7,7 @@ Use the command `"Generate JSON Schema for type..."` to get a list of type defin
 
 The generated schema is opened on a new document and can be saved from there.
 
-\!\[feature X\]\(images/feature-x.png\)
+[comment]: # (\!\[feature X\]\(images/feature-x.png\))
 
 
 ## Extension Settings
@@ -24,10 +24,14 @@ This extension contributes the following settings:
 The JSON schema generation does not work for classes and conditional types.  
 File scheme generations issues with [typescript-to-json-schema](https://github.com/xiag-ag/typescript-to-json-schema/issues)
 
-The extension is still being developed and often fails in somewhat misterious ways.
+- The extension is still being developed and sometimes fails in misterious ways.
+- If the specified type name is not unique, the schema might be generated for the wrong type. 
+
 
 ## Release Notes
 
+## 0.0.3
+updated typescript-to-json-schema to 0.6.0
 
 ### 0.0.2
 
