@@ -1,5 +1,7 @@
 # Change Log
 
+## 0.0.4
+moved to ts-json-schema-generator
 
 ## 0.0.3
 - updated typescript-to-json-schema to 0.6.0
