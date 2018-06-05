@@ -2,7 +2,7 @@
 
 import * as vscode from 'vscode';
 import * as ts from 'typescript';
-import { Factory, SchemaGenerator as SG } from 'typescript-to-json-schema';
+import { createGenerator, SchemaGenerator as SG } from 'ts-json-schema-generator';
 
 export default class SchemaGenerator {
 
@@ -56,7 +56,7 @@ export default class SchemaGenerator {
 
         let schemaGenerator: SG;
         try {
-            schemaGenerator = Factory.createGenerator({
+            schemaGenerator = createGenerator({
                 path: files[0].fsPath,
                 expose: config.get<"all"|"none"|"export">("generateJSONSchema.expose", "export"),
                 topRef: config.get<boolean>("generateJSONSchema.topRef", true),

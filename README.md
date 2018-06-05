@@ -1,6 +1,6 @@
 # Typescript JSON schema generator
 
-The extension uses [typescript-to-json-schema](https://github.com/xiag-ag/typescript-to-json-schema) to generate JSON schemas from Typescript sources.
+The extension uses [ts-json-schema-generator](https://github.com/vega/ts-json-schema-generator) to generate JSON schemas from Typescript sources.
 
 
 Use the command `"Generate JSON Schema for type..."` to get a list of type definitions and interfaces in the page for which a JSON schema can be generated.  
@@ -22,7 +22,7 @@ This extension contributes the following settings:
 ## Known Issues
 
 The JSON schema generation does not work for classes and conditional types.  
-File scheme generations issues with [typescript-to-json-schema](https://github.com/xiag-ag/typescript-to-json-schema/issues)
+File scheme generations issues with [ts-json-schema-generator](https://github.com/vega/ts-json-schema-generator/issues)
 
 - The extension is still being developed and sometimes fails in misterious ways.
 - If the specified type name is not unique, the schema might be generated for the wrong type. 
@@ -30,13 +30,15 @@ File scheme generations issues with [typescript-to-json-schema](https://github.c
 
 ## Release Notes
 
+
+## 0.0.4
+moved to ts-json-schema-generator
+
 ## 0.0.3
 updated typescript-to-json-schema to 0.6.0
 
 ### 0.0.2
-
 fixed: Schema generator fails silently when there are errors on the program.
 
 ### 0.0.1
-
 Initial release of Typescript JSON schema generator
