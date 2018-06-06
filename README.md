@@ -24,9 +24,6 @@ This extension contributes the following settings:
 The JSON schema generation does not work for classes and conditional types.  
 File scheme generations issues with [ts-json-schema-generator](https://github.com/vega/ts-json-schema-generator/issues)
 
-- The extension is still being developed and sometimes fails in misterious ways.
-- If the specified type name is not unique, the schema might be generated for the wrong type. 
-
 
 ## Release Notes
 
