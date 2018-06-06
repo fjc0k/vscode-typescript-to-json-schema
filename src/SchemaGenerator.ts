@@ -27,23 +27,23 @@ export default class SchemaGenerator {
 
         const selected = await vscode.window.showQuickPick(idNames);
         if (!selected) { return; }
-        this.startGeneratingSchema(selected);
+        this.startGeneratingSchema(selected, textDocument.fileName);
     }
 
-    private startGeneratingSchema(idName: string) {
+    private startGeneratingSchema(idName: string, fileName: string) {
         const progressConfig = {
             location: vscode.ProgressLocation.Window,
             title: `Generating JSON schema for ${idName}`,
             cancellable: false,
         };
 
-        vscode.window.withProgress(progressConfig, (progress, token) => this.generateSchema(idName)).then(
+        vscode.window.withProgress(progressConfig, (progress, token) => this.generateSchema(idName, fileName)).then(
             textEditor => {},
             reason => vscode.window.showErrorMessage(reason)
         );
     }
 
-    private async generateSchema(idName: string) {
+    private async generateSchema(idName: string, fileName:string) {
 
         const files = await vscode.workspace.findFiles('**/tsconfig.json', '**/node_modules/**', 1);
 
@@ -70,7 +70,7 @@ export default class SchemaGenerator {
         }
             
         try {
-            const schema = schemaGenerator.createSchema(idName);
+            const schema = schemaGenerator.createSchema(idName, fileName);
             const newDocument = await vscode.workspace.openTextDocument({
                 content: JSON.stringify(schema, undefined, 4),
                 language: "json"

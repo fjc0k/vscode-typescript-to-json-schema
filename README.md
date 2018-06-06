@@ -31,6 +31,9 @@ File scheme generations issues with [ts-json-schema-generator](https://github.co
 ## Release Notes
 
 
+## 0.0.5
+disambiguate type definition using current filename
+
 ## 0.0.4
 moved to ts-json-schema-generator
 
