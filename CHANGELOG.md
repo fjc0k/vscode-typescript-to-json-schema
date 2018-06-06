@@ -1,7 +1,7 @@
 # Change Log
 
 
-## 0.0.5
+## 0.0.7
 - moved to marcoqu/ts-json-schema-generator fork
 - disambiguate type definition using filename
 
