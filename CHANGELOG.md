@@ -1,6 +1,10 @@
 # Change Log
 
 
+## 0.0.8
+- strictTuples option: Do not allow additional items on tuples
+- Fix configuration access
+
 ## 0.0.7
 - moved to marcoqu/ts-json-schema-generator fork
 - disambiguate type definition using filename

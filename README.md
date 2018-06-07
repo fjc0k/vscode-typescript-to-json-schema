@@ -18,6 +18,7 @@ This extension contributes the following settings:
 * `generateJSONSchema.topRef`: Include top reference.
 * `generateJSONSchema.jsDoc`: JsDoc description to include in JSON schema.
 * `generateJSONSchema.sortProps`: Sort properties in JSON schema.
+* `generateJSONSchema.strictTuples`: Do not allow additional items on tuples.
 
 ## Known Issues
 
@@ -26,19 +27,4 @@ File scheme generations issues with [ts-json-schema-generator](https://github.co
 
 
 ## Release Notes
-
-
-## 0.0.7
-disambiguate type definition using current filename
-
-## 0.0.4
-moved to ts-json-schema-generator
-
-## 0.0.3
-updated typescript-to-json-schema to 0.6.0
-
-### 0.0.2
-fixed: Schema generator fails silently when there are errors on the program.
-
-### 0.0.1
-Initial release of Typescript JSON schema generator
+See [Change log](./CHANGELOG.md)

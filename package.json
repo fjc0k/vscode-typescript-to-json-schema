@@ -3,7 +3,7 @@
     "displayName": "Typescript JSON schema generator",
     "description": "Create JSON schemas from typescript code",
     "icon": "images/icon.png",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "publisher": "marcoq",
     "repository": {
         "type": "git",
@@ -57,6 +57,11 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Sort properties in JSON schema"
+                },
+                "generateJSONSchema.strictTuples": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Do not allow additional items on tuples"
                 }
             }
         }
@@ -77,7 +82,7 @@
         "vscode": "^1.1.6"
     },
     "dependencies": {
-        "typescript": "^2.8.3",
-        "ts-json-schema-generator": "github:marcoqu/ts-json-schema-generator"
+        "ts-json-schema-generator": "github:marcoqu/ts-json-schema-generator",
+        "typescript": "^2.8.3"
     }
 }

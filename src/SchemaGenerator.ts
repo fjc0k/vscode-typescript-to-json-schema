@@ -52,16 +52,17 @@ export default class SchemaGenerator {
             return;
         }
 
-        const config = vscode.workspace.getConfiguration('vscode-typescript-to-json-schema');
+        const config = vscode.workspace.getConfiguration('generateJSONSchema');
 
         let schemaGenerator: SG;
         try {
             schemaGenerator = createGenerator({
                 path: files[0].fsPath,
-                expose: config.get<"all"|"none"|"export">("generateJSONSchema.expose", "export"),
-                topRef: config.get<boolean>("generateJSONSchema.topRef", true),
-                jsDoc: config.get<"none"|"extended"|"basic">("generateJSONSchema.jsDoc", "basic"),
-                sortProps: config.get<boolean>("generateJSONSchema.sortProps", true),
+                expose: config.get<"all"|"none"|"export">("expose", "export"),
+                topRef: config.get<boolean>("topRef", true),
+                jsDoc: config.get<"none"|"extended"|"basic">("jsDoc", "basic"),
+                sortProps: config.get<boolean>("sortProps", true),
+                strictTuples: config.get<boolean>("strictTuples", true),
                 type: idName,
             });
         } catch (error) {
