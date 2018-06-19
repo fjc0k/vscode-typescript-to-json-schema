@@ -1,5 +1,7 @@
 # Change Log
 
+## 0.0.9
+- Fix error with anonymous type literals
 
 ## 0.0.8
 - strictTuples option: Do not allow additional items on tuples
