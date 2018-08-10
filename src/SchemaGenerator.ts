@@ -62,7 +62,6 @@ export default class SchemaGenerator {
                 topRef: config.get<boolean>("topRef", true),
                 jsDoc: config.get<"none"|"extended"|"basic">("jsDoc", "basic"),
                 sortProps: config.get<boolean>("sortProps", true),
-                strictTuples: config.get<boolean>("strictTuples", true),
                 type: idName,
             });
         } catch (error) {

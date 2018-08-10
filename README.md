@@ -18,7 +18,6 @@ This extension contributes the following settings:
 * `generateJSONSchema.topRef`: Include top reference.
 * `generateJSONSchema.jsDoc`: JsDoc description to include in JSON schema.
 * `generateJSONSchema.sortProps`: Sort properties in JSON schema.
-* `generateJSONSchema.strictTuples`: Do not allow additional items on tuples.
 
 ## Known Issues
 

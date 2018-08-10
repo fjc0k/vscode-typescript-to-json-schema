@@ -57,11 +57,6 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Sort properties in JSON schema"
-                },
-                "generateJSONSchema.strictTuples": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Do not allow additional items on tuples"
                 }
             }
         }
@@ -77,12 +72,12 @@
     "devDependencies": {
         "@types/json-schema": "^6.0.1",
         "@types/mocha": "^2.2.42",
-        "@types/node": "^7.0.65",
-        "tslint": "^5.8.0",
-        "vscode": "^1.1.6"
+        "@types/node": "^7.0.68",
+        "tslint": "^5.11.0",
+        "vscode": "^1.1.18"
     },
     "dependencies": {
         "ts-json-schema-generator": "github:marcoqu/ts-json-schema-generator",
-        "typescript": "^2.8.3"
+        "typescript": "^3.0.1"
     }
 }
