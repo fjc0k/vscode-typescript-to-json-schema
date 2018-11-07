@@ -3,7 +3,7 @@
     "displayName": "Typescript JSON schema generator",
     "description": "Create JSON schemas from typescript code",
     "icon": "images/icon.png",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "publisher": "marcoq",
     "repository": {
         "type": "git",
@@ -57,6 +57,11 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Sort properties in JSON schema"
+                },
+                "generateJSONSchema.skipTypeCheck": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Skip type checks for better performance"
                 }
             }
         }

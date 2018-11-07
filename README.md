@@ -7,9 +7,6 @@ Use the command `"Generate JSON Schema for type..."` to get a list of type defin
 
 The generated schema is opened on a new document and can be saved from there.
 
-[comment]: # (\!\[feature X\]\(images/feature-x.png\))
-
-
 ## Extension Settings
 
 This extension contributes the following settings:
@@ -18,6 +15,7 @@ This extension contributes the following settings:
 * `generateJSONSchema.topRef`: Include top reference.
 * `generateJSONSchema.jsDoc`: JsDoc description to include in JSON schema.
 * `generateJSONSchema.sortProps`: Sort properties in JSON schema.
+* `generateJSONSchema.skipTypeCheck`: Skip type checks for better performance.
 
 ## Known Issues
 
