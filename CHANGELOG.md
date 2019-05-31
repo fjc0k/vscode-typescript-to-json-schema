@@ -1,13 +1,16 @@
 # Change Log
 
 
+## 0.0.12
+- updated typescript-to-json-schema to 0.43.0
+
 ## 0.0.11
 - updated typescript-to-json-schema to 0.36.1
 - added skipTypeCheck option
 
 ## 0.0.10
 - updated typescript-to-json-schema to 0.32.0
-- removed strictTuples option, as t is now obsolete
+- removed strictTuples option, as it is now obsolete
 
 ## 0.0.9
 - Fix error with anonymous type literals
