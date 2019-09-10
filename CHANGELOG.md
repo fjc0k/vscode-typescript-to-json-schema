@@ -1,5 +1,7 @@
 # Change Log
 
+## 0.0.13
+- updated typescript-to-json-schema to 0.52.14
 
 ## 0.0.12
 - updated typescript-to-json-schema to 0.43.0

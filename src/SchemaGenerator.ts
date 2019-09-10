@@ -57,7 +57,7 @@ export default class SchemaGenerator {
         let schemaGenerator: SG;
         try {
             schemaGenerator = createGenerator({
-                path: files[0].fsPath,
+                tsconfig: files[0].fsPath,
                 expose: config.get<"all"|"none"|"export">("expose", "export"),
                 topRef: config.get<boolean>("topRef", true),
                 jsDoc: config.get<"none"|"extended"|"basic">("jsDoc", "basic"),
